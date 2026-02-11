@@ -1,0 +1,11 @@
+node_modules/
+.env
+uploads/events/
+uploads/media/
+uploads/messages/
+mysql-data/
+server-out.log
+server-err.log
+mysql-out.log
+mysql-err.log
+npm-debug.log*
