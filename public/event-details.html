@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Details | CampusSponsor</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js" defer></script>
+    <script src="/js/pages/event-details.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div data-nav></div>
+    </header>
+    <main class="page-shell">
+      <section class="hero" id="eventHero"></section>
+      <section class="section grid-2">
+        <div class="panel">
+          <h2 class="section-title">Event Overview</h2>
+          <div id="eventOverview"></div>
+        </div>
+        <div class="panel">
+          <h2 class="section-title">Sponsorship Tiers</h2>
+          <div class="stack" id="tiersList"></div>
+        </div>
+      </section>
+      <section class="section grid-2">
+        <div class="form-card hidden" id="requestSection">
+          <h2 class="section-title">Send Sponsorship Request</h2>
+          <form id="requestForm" class="form-grid">
+            <div class="field full">
+              <label for="tierId">Select Tier</label>
+              <select id="tierId" name="tierId"></select>
+            </div>
+            <div class="field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Share what kind of brand collaboration you want."></textarea>
+            </div>
+            <div class="field full">
+              <button class="button" type="submit">Send Request</button>
+            </div>
+          </form>
+          <div id="requestNotice" class="notice"></div>
+        </div>
+        <div class="form-card hidden" id="mediaSection">
+          <h2 class="section-title">Upload Proof Media</h2>
+          <form id="mediaForm" class="form-grid">
+            <div class="field">
+              <label for="mediaTitle">Title</label>
+              <input id="mediaTitle" name="title" />
+            </div>
+            <div class="field">
+              <label for="mediaCollaborationId">Collaboration</label>
+              <select id="mediaCollaborationId" name="collaborationId"></select>
+            </div>
+            <div class="field full">
+              <label for="mediaFile">File</label>
+              <input id="mediaFile" name="file" type="file" accept="image/*,video/*,.pdf,.doc,.docx" />
+            </div>
+            <div class="field full">
+              <button class="button-soft" type="submit">Upload Media</button>
+            </div>
+          </form>
+          <div id="mediaNotice" class="notice"></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="panel">
+          <div class="section-header">
+            <h2 class="section-title">Collaboration Activity</h2>
+          </div>
+          <div id="collaborationList" class="list"></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="panel">
+          <div class="section-header">
+            <h2 class="section-title">Media Gallery</h2>
+          </div>
+          <div id="mediaGallery" class="media-grid"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
