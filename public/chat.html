@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages | CampusSponsor</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js" defer></script>
+    <script src="/js/pages/chat.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div data-nav></div>
+    </header>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Messaging</span>
+            <h1>Keep event negotiations and delivery details in one thread.</h1>
+            <p>Each collaboration gets its own chat stream, with optional file attachments.</p>
+          </div>
+          <div class="hero-aside">
+            <strong>Chat model</strong>
+            <p class="small muted">This project uses a polling-style message API so it works without WebSockets.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section split-layout">
+        <aside class="panel chat-sidebar">
+          <h2 class="section-title">Collaborations</h2>
+          <div id="chatList" class="chat-list"></div>
+        </aside>
+        <section class="panel chat-thread">
+          <div class="section-header">
+            <h2 class="section-title" id="chatTitle">Select a conversation</h2>
+          </div>
+          <div id="messages" class="messages"></div>
+          <form id="messageForm" class="form-grid mt-1">
+            <div class="field full">
+              <label for="messageText">Message</label>
+              <textarea id="messageText" name="message" placeholder="Type your update here"></textarea>
+            </div>
+            <div class="field">
+              <label for="attachment">Attachment</label>
+              <input id="attachment" name="attachment" type="file" accept="image/*,video/*,.pdf,.doc,.docx" />
+            </div>
+            <div class="field field-align-end">
+              <button class="button" type="submit">Send Message</button>
+            </div>
+          </form>
+          <div id="chatNotice" class="notice"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
+
+

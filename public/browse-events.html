@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Events | CampusSponsor</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js" defer></script>
+    <script src="/js/pages/browse-events.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div data-nav></div>
+    </header>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Discovery</span>
+            <h1>Review approved student events with the context sponsors actually need.</h1>
+            <p>Filter by category, location, and audience to get straight to the right opportunities.</p>
+          </div>
+          <div class="hero-aside">
+            <strong>Search inputs</strong>
+            <p class="small muted">Events shown here come directly from `/api/events/all` with approval-aware filtering.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="form-card">
+          <form id="filterForm" class="form-grid">
+            <div class="field">
+              <label for="q">Keyword</label>
+              <input id="q" name="q" placeholder="Hackathon, cultural fest, summit" />
+            </div>
+            <div class="field">
+              <label for="location">Location</label>
+              <input id="location" name="location" />
+            </div>
+            <div class="field">
+              <label for="category">Category</label>
+              <input id="category" name="category" />
+            </div>
+            <div class="field">
+              <label for="minAudience">Minimum Audience</label>
+              <input id="minAudience" name="minAudience" type="number" min="0" />
+            </div>
+            <div class="field full">
+              <div class="inline-actions">
+                <button class="button" type="submit">Apply Filters</button>
+                <button class="button-soft" type="button" id="resetFilters">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="section">
+        <div class="cards-grid" data-events-grid></div>
+      </section>
+      <div id="browseNotice" class="notice"></div>
+    </main>
+  </body>
+</html>
+
+
