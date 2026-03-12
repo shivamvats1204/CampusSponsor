@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event | CampusSponsor</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js" defer></script>
+    <script src="/js/pages/create-event.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div data-nav></div>
+    </header>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Club workflow</span>
+            <h1>Publish the opportunity the way a sponsor actually wants to review it.</h1>
+            <p>Bundle the event case, visual assets, and sponsor packages in one structured submission.</p>
+          </div>
+          <div class="hero-aside">
+            <strong>Reminder</strong>
+            <p class="small muted">New events start in a pending state until an admin reviews them.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="form-card">
+          <h2 class="section-title">Create Event</h2>
+          <form id="eventForm" class="form-grid">
+            <div class="field">
+              <label for="title">Event Title</label>
+              <input id="title" name="title" required />
+            </div>
+            <div class="field">
+              <label for="category">Category</label>
+              <input id="category" name="category" placeholder="Tech, Cultural, Sports" required />
+            </div>
+            <div class="field">
+              <label for="eventDate">Event Date</label>
+              <input id="eventDate" name="eventDate" type="date" required />
+            </div>
+            <div class="field">
+              <label for="audience">Expected Audience</label>
+              <input id="audience" name="audience" type="number" min="0" />
+            </div>
+            <div class="field">
+              <label for="venue">Venue</label>
+              <input id="venue" name="venue" required />
+            </div>
+            <div class="field">
+              <label for="location">Location</label>
+              <input id="location" name="location" required />
+            </div>
+            <div class="field full">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="field">
+              <label for="brochure">Brochure (PDF)</label>
+              <input id="brochure" name="brochure" type="file" accept=".pdf,application/pdf" />
+            </div>
+            <div class="field">
+              <label for="poster">Poster Image</label>
+              <input id="poster" name="poster" type="file" accept="image/*" />
+            </div>
+            <div class="field full">
+              <div class="section-header">
+                <div>
+                  <h3 class="section-title section-title-sm">Sponsorship Tiers</h3>
+                  <p class="section-copy">Add one or more packages before publishing the event.</p>
+                </div>
+                <button class="button-soft" type="button" id="addTierButton">Add Tier</button>
+              </div>
+              <div class="stack" id="tiersContainer"></div>
+            </div>
+            <div class="field full">
+              <button class="button" type="submit">Submit Event</button>
+            </div>
+          </form>
+          <div id="eventNotice" class="notice"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
