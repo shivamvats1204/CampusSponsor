@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | CampusSponsor</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/app.js" defer></script>
+    <script src="/js/pages/profile.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div data-nav></div>
+    </header>
+    <main class="page-shell">
+      <section class="hero" id="profileHero"></section>
+      <section class="section">
+        <div class="form-card">
+          <h2 class="section-title">Edit Profile</h2>
+          <form id="profileForm" class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" disabled />
+            </div>
+            <div id="clubProfileFields" class="grid-2 hidden full-span">
+              <div class="field">
+                <label for="collegeName">College Name</label>
+                <input id="collegeName" name="collegeName" />
+              </div>
+              <div class="field">
+                <label for="clubName">Club Name</label>
+                <input id="clubName" name="clubName" />
+              </div>
+              <div class="field">
+                <label for="audienceSize">Audience Size</label>
+                <input id="audienceSize" name="audienceSize" type="number" min="0" />
+              </div>
+              <div class="field full">
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+              </div>
+              <div class="field full">
+                <label for="pastEvents">Past Events</label>
+                <textarea id="pastEvents" name="pastEvents"></textarea>
+              </div>
+            </div>
+            <div id="companyProfileFields" class="grid-2 hidden full-span">
+              <div class="field">
+                <label for="companyName">Company Name</label>
+                <input id="companyName" name="companyName" />
+              </div>
+              <div class="field">
+                <label for="industry">Industry</label>
+                <input id="industry" name="industry" />
+              </div>
+              <div class="field full">
+                <label for="marketingGoals">Marketing Goals</label>
+                <textarea id="marketingGoals" name="marketingGoals"></textarea>
+              </div>
+              <div class="field">
+                <label for="budgetRange">Budget Range</label>
+                <input id="budgetRange" name="budgetRange" />
+              </div>
+            </div>
+            <div class="field full">
+              <button class="button" type="submit">Save Changes</button>
+            </div>
+          </form>
+          <div id="profileNotice" class="notice"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
